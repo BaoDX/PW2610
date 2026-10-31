@@ -29,7 +29,7 @@ test('test2', async ({ page }) => {
   await page.getByRole('link', { name: 'Quick Start' }).click();
   await page.locator('iframe[title="Sandbox Preview"]').first().contentFrame().getByRole('button', { name: 'I\'m a button' }).click();
   await page.getByRole('button', { name: 'Copy page' }).click();
-  await page.getByRole('link', { name: 'API Reference' }).click();
+  await page.getByRole('link', { name: 'API Reference', exact: true }).click();
   await page.getByRole('link', { name: 'Components' }).nth(3).click();
   await page.getByRole('article').getByRole('link', { name: '<Profiler>' }).click();
   await page.getByRole('button', { name: 'Copy page' }).click();
